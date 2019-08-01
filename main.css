@@ -1,4 +1,17 @@
-﻿body {
+﻿
+body {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+    body {
+        margin-left: 200px;
+        margin-right: 200px;
+        text-align: justify;
+        text-align: center;
+    }
 }
 .responsive {
     max-width: 100%;
@@ -9,3 +22,20 @@
     bottom: 0;
     width: 100%;
     height: 2.5rem; /* Footer height */
+}
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    
+}
+
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+       
+    }
