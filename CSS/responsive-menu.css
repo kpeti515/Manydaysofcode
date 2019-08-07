@@ -1,0 +1,94 @@
+body {
+  margin-top: 60px;
+}
+.nav {
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  background-color: gold;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.nav .navheader {
+  display: inline;
+  float: right;
+}
+.nav .navheader .navtitle {
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px 10px 10px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+.navlinks {
+  display: inline;
+}
+.nav .navbutton {
+  display: none;
+}
+.nav .navlinks {
+  display: inline-block;
+  float: left;
+  line-height: 18px;
+}
+.nav .navlinks a {
+  display: inline-block;
+  padding: 16px 5px 16px;
+  text-decoration: none;
+  color: black;
+}
+.navlinks a:hover {
+  background: #ffe766;
+}
+.nav #nav-check {
+  display: none;
+}
+@media (max-width: 780px) {
+  .nav .navbutton {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: yellow;
+  }
+  .nav .navbutton label {
+    display: block;
+    width: 50px;
+    height: 35px;
+    padding: 15px 0px 0px 20px;
+  }
+  /* .nav  .navbutton  label:hover,.nav  #nav-check:checked ~ .navbutton  label {
+      background-color: rgba(255, 0, 0, 0.3);
+    }*/
+  .nav .navbutton label span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-top: 2px solid black;
+  }
+  .nav .navlinks {
+    position: absolute;
+    display: inline-block;
+    width: 40%;
+    background-color: gold;
+    height: 0px;
+    transition: left 2s ease-in-out;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    margin: 0px;
+  }
+  .nav .navlinks a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .nav #nav-check:not(:checked) ~ .navlinks {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .navlinks {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}

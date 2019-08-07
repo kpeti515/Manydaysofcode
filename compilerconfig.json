@@ -6,5 +6,9 @@
   {
     "outputFile": "responsive-menu.css",
     "inputFile": "responsive-menu.less"
+  },
+  {
+    "outputFile": "CSS/resp.css",
+    "inputFile": "CSS/resp.less"
   }
 ]

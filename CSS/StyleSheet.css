@@ -1,18 +1,26 @@
-﻿body {
+@browserwidth : {
+  desktop: 1024px;
+  tablet: 780px;
+  phone: 480px;
+}
+body {
+  margin-top: 15px;
+  padding: 30px;
   text-align: center;
-  font-family: Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+address {
+  text-align: center;
 }
 img {
   width: 75vw;
 }
 @media only screen and (max-width: 780px) {
-  body {
-    background-color: aqua;
-  }
   .map-responsive,
   .youtube {
     position: relative;
-    padding-bottom: 56.2%;
+    z-index: -1;
+    padding-bottom: 56.25%;
     padding-top: 10px;
     height: 0;
     overflow: hidden;
@@ -20,7 +28,6 @@ img {
   .map-responsive iframe,
   .youtube iframe {
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,12 +35,10 @@ img {
   }
 }
 @media only screen and (max-width: 480px) {
-  body {
-    background-color: red;
-  }
   .map-responsive,
   .youtube {
     position: relative;
+    z-index: -1;
     padding-bottom: 56.25%;
     padding-top: 10px;
     height: 0;
