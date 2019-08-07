@@ -2,5 +2,9 @@
   {
     "outputFile": "StyleSheet.css",
     "inputFile": "StyleSheet.less"
+  },
+  {
+    "outputFile": "responsive-menu.css",
+    "inputFile": "responsive-menu.less"
   }
 ]

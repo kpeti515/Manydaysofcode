@@ -1,43 +1,18 @@
-﻿nav {
-  background-color: gold;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 15px 0 black;
-  z-index: 1;
-}
-nav li {
-  padding: 20px;
-  display: inline-block;
-}
-nav li:hover {
-  background: #ffe766;
-}
-nav li a {
-  text-decoration: none;
-  color: black;
-}
-body {
-  margin-top: 15px;
-  padding: 30px;
+﻿body {
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-address {
-  text-align: left;
+  font-family: Tahoma, Geneva, Verdana, sans-serif, sans-serif;
 }
 img {
   width: 75vw;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 780px) {
+  body {
+    background-color: aqua;
+  }
   .map-responsive,
   .youtube {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.2%;
     padding-top: 10px;
     height: 0;
     overflow: hidden;
@@ -45,17 +20,21 @@ img {
   .map-responsive iframe,
   .youtube iframe {
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
 }
-@media only screen and (min-width: 780px) {
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: red;
+  }
   .map-responsive,
   .youtube {
     position: relative;
-    padding-bottom: 56.2%;
+    padding-bottom: 56.25%;
     padding-top: 10px;
     height: 0;
     overflow: hidden;

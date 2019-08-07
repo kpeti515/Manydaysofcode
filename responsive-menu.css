@@ -1,0 +1,97 @@
+﻿body {
+  margin-top: 60px;
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: gold;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.nav .navheader {
+  display: inline;
+  float: right;
+}
+.nav .navheader .navtitle {
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px;
+  font-family: Courier New, Courier, monospace;
+}
+.nav .nav-button {
+  display: none;
+}
+.nav .nav-links {
+  display: inline;
+  float: left;
+  line-height: 18px;
+}
+.nav .nav-links > a {
+  display: inline-block;
+  padding: 16px 5px 16px;
+  margin: 0px 0px;
+  text-decoration: none;
+  color: black;
+}
+.nav.nav-links :hover {
+  background: #ffe766;
+}
+#activepage a:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+@media (max-width: 780px) {
+  /*navigation button elhelyezkezkedese*/
+  .nav .nav-button {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  /*egyeb tulajdonsagai*/
+  .nav .nav-button label {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    padding: 15px;
+    background-color: aliceblue;
+  }
+  /*ha raviszem az egeret milyen szinu legyen*/
+  .nav .nav-button label:hover,
+  .nav #nav-check:checked ~ .nav-button label {
+    background-color: #858200;
+  }
+  /*3sav kialakitasa*/
+  .nav .nav-button label span {
+    display: block;
+    width: 30px;
+    height: 10px;
+    border-top: 2px solid black;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ff0000;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  /*label ha nincs csekkolva nem jelenik meg a menu*/
+  .nav #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  /*label ha check akkor el�j�n a men�*/
+  .nav #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
