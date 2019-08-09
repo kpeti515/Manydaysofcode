@@ -10,5 +10,13 @@
   {
     "outputFile": "CSS/resp.css",
     "inputFile": "CSS/resp.less"
+  },
+  {
+    "outputFile": "CSS/StyleSheet3.css",
+    "inputFile": "CSS/StyleSheet3.less"
+  },
+  {
+    "outputFile": "CSS/responsive-menu3.css",
+    "inputFile": "CSS/responsive-menu3.less"
   }
 ]

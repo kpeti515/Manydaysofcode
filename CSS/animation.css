@@ -1,0 +1,47 @@
+.navlinks a:hover {
+  position: relative;
+  animation-name: example;
+  animation-duration: 0.2;
+  animation-fill-mode: forwards;
+}
+@keyframes example {
+  from {
+    left: 0px;
+    top: 0px;
+  }
+  to {
+    left: 1px;
+    top: 2px;
+  }
+}
+.navlinks a {
+  position: relative;
+  animation-name: back;
+  animation-duration: 0.1s;
+}
+@keyframes back {
+  from {
+    left: 1px;
+    top: 2px;
+  }
+  to {
+    left: 0px;
+    top: 0px;
+  }
+}
+.navlinks a:active {
+  position: relative;
+  transform: rotateX(30deg);
+  animation-name: click;
+  animation-duration: 0.2s;
+}
+@keyframes click {
+  from {
+    left: 1px;
+    top: 3px;
+  }
+  to {
+    left: 0px;
+    top: 0px;
+  }
+}
