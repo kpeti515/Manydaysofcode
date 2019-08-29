@@ -1,0 +1,36 @@
+body {
+  margin-top: 45px;
+}
+.navbar {
+  padding: 0.1em 1em;
+}
+.navbar > a:hover {
+  transform: rotateY(360deg);
+  transition: 1.5s ease-in-out;
+}
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.5);
+}
+.linkedinicon {
+  color: #0077B5 !important;
+}
+.fbicon {
+  color: #3b5998 !important;
+}
+.instaicon {
+  color: #e4405f !important;
+}
+footer {
+  display: inline-block;
+  text-align: center;
+}
+footer > .row {
+  display: inline-block;
+}
+footer > .row i {
+  font-size: 2em;
+}
+footer > .row a > i:hover {
+  transform: rotateY(360deg);
+  transition: 1.5s ease-in-out;
+}
