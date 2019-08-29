@@ -11,9 +11,9 @@ function hide (){
    }
 };
 
+  //chosa91 method - ES2016 azt hiszem...
 const add = (a = 0, b = 0) => {
-    // ✅ always cast to Number bc. html element.value if any then it'll be string or null
-    a = typeof a === 'number' ? a : Number(a) // short-if - ezzel pont tisztában voltam 👍, ha a tpye-ja number ok, ha nem  akkor a legyen number a
+    a = typeof a === 'number' ? a : Number(a) 
     b = typeof b === 'number' ? b : Number(b)
     const sum = a + b
     document.getElementById("operator").innerHTML = "+"
@@ -34,12 +34,23 @@ function multi (a,b) {
 };
 
 function div (a,b) {
-    document.getElementById("operator").innerHTML = "/";
-    document.getElementById("opname").innerHTML = "Division";
+   // b == 0 ? document.getElementById("result").value = "Cannot divide with zero" : "else ág kerülne ide...de ami a lentebbi else ágban van azt nem tudom meghívni"
+   if (b==0) {
+    document.getElementById("result").value = "Cannot divide with zero"
+   } 
+   else {
+     document.getElementById("operator").innerHTML = "/"
+     document.getElementById("opname").innerHTML = "Division"
     return document.getElementById("result").value = Number(a) / Number(b);
+   }
 };
 function mod (a,b) {
+    if (b==0) {
+        document.getElementById("result").value = "Number B is 0-> no meaning"
+       } 
+    else {
     document.getElementById("operator").innerHTML = "%";
     document.getElementById("opname").innerHTML = "Modus operation";
     return document.getElementById("result").value = Number(a) % Number(b);
+    }
 };
