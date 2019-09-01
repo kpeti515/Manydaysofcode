@@ -23,7 +23,7 @@ exitGame.style.visibility = "hidden"
 
 //deck declaration
 let types = ["Heats", "Clubs", "Diamonds", "Spades"]
-let number = ["Two", "Tree", "Four", "Five", "Six", "Seven", "Eigth", "Nine", "Ten", "Jack", "Queen", "King", "Ace"]
+let number = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eigth", "Nine", "Ten", "Jack", "Queen", "King", "Ace"]
 
 
 
@@ -63,25 +63,28 @@ function getCardName(card) {
 }
 
 function getCardRealvalue(card) {
-    switch (card.types) {
-        case "Two":
+    switch (card.number) {
+        case 'Ace':
+            return 1;
+        case 'Two':
             return 2;
-        case "Tree":
+        case 'Three':
             return 3;
-        case "Four":
+        case 'Four':
             return 4;
-        case "Five":
+        case 'Five':
             return 5;
-        case "Six":
+        case 'Six':
             return 6;
-        case "Seven":
+        case 'Seven':
             return 7;
-        case "Eight":
+        case 'Eight':
             return 8;
-        case "Nine":
-            return 9
+        case 'Nine':
+            return 9;
         default:
             return 10;
+
     }
 }
 
