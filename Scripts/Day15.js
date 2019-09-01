@@ -5,8 +5,8 @@ let newGameButton = document.getElementById("newgame"),
     stay = document.getElementById("stay"),
     exitGame = document.getElementById("exit"),
     message = document.getElementById("message"),
-    pcards = document.getElementById("yourcards"),
-    dcards = document.getElementById("dealercards")
+    pcards = document.getElementById("pcards"),
+    dcards = document.getElementById("dcards")
 
 //starting points
 let gameStarted = false,
@@ -62,7 +62,7 @@ function getCardName(card) {
     return card.number + " of " + card.types
 }
 
-function getCardRealvalue() {
+function getCardRealvalue(card) {
     switch (card.types) {
         case "Two":
             return 2;
@@ -111,7 +111,7 @@ function showStatus() {
 
     let playerCardName = ""
     let dealerCardName = ""
-    console.log(playerCardName)
+    //console.log(playerCardName)
 
     for (let i = 0; i < playerCards.length; i++) {
         playerCardName += getCardName(playerCards[i]) + "\n" 
@@ -140,7 +140,7 @@ function showStatus() {
     }
 
 }
-//showStatus()
+showStatus()
 
 //button handlers
 function newGame() {
