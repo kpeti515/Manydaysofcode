@@ -23,12 +23,11 @@ exitGame.style.visibility = "hidden"
 
 //deck declaration
 let types = ["Heats", "Clubs", "Diamonds", "Spades"]
-let number = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eigth", "Nine", "Ten", "Jack", "Queen", "King", "Ace"]
-
-
+let number = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"]
 
 function newDeck() {
     let deck = []
+    console.log(deck)
     for (var typesId = 0; typesId < types.length; typesId++) {
         for (var numberId = 0; numberId < number.length; numberId++) {
             let card = {
@@ -39,27 +38,6 @@ function newDeck() {
         }
     }
     return deck
-}
-
-
-
-let deck = newDeck()
-
-function shuffleDeck(deck) {
-    for (let i = 0; i < deck.length; i++) {
-        let swapId = Math.trunc(Math.random() * deck.length)
-        let temporary = deck[swapId]
-        deck[swapId] = deck[i]
-        deck[i] = temporary
-    }
-}
-
-function getNextCard() {
-    return deck.shift()
-}
-
-function getCardName(card) {
-    return card.number + " of " + card.types
 }
 
 function getCardRealvalue(card) {
@@ -86,6 +64,23 @@ function getCardRealvalue(card) {
             return 10;
 
     }
+}
+
+function shuffleDeck(deck) {
+    for (let i = 0; i < deck.length; i++) {
+        let swapId = Math.trunc(Math.random() * deck.length)
+        let temporary = deck[swapId]
+        deck[swapId] = deck[i]
+        deck[i] = temporary
+    }
+}
+
+function getNextCard() {
+    return deck.shift()
+}
+
+function getCardName(card) {
+    return card.number + " of " + card.types
 }
 
 function getScore(cardArray) {
@@ -141,7 +136,6 @@ function showStatus() {
         stay.style.visibility = "hidden"
         exitGame.style.visibility = "hidden"
     }
-
 }
 showStatus()
 
@@ -157,9 +151,10 @@ function newGame() {
     deck = newDeck()
     shuffleDeck(deck) 
     
-    playerCards = [getNextCard(), getNextCard()] //ezzel kapcsolatos a hiba
+    
+    playerCards = [getNextCard(), getNextCard()]
     dealerCards = [getNextCard(), getNextCard()]
-    console.log(playerCards) //lekérdezni le lehet, a tartalmának a feldolgozásával van a hiba*/
+   // console.log(playerCards) 
     
     showStatus()
 
