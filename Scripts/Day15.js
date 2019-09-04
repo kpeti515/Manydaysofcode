@@ -27,7 +27,6 @@ let number = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "
 
 function newDeck() {
     let deck = []
-    console.log(deck)
     for (var typesId = 0; typesId < types.length; typesId++) {
         for (var numberId = 0; numberId < number.length; numberId++) {
             let card = {
@@ -105,37 +104,59 @@ function updateScores() {
 }
 
 function showStatus() {
-   // !gameStarted ? message.innerHTML = 'Press the "New Game" button to start the game!' : message.innerHTML = "Good luck!"
-
-    let playerCardName = ""
-    let dealerCardName = ""
-    //console.log(playerCardName)
-
-    for (let i = 0; i < playerCards.length; i++) {
-        playerCardName += getCardName(playerCards[i]) + "\n" 
+    if (!gameStarted) {
+        message.innerHTML = 'Press the "New Game" button to start the game!'
+        return
     }
-        
-    for (let i = 0; i < dealerCards.length; i++) {
-        dealerCardName += getCardName(dealerCards[i]) + "\n" 
-    }
+    else {
+        message.innerHTML = "Good luck!"
 
-    updateScores();
+        let playerCardName = ""
+        let dealerCardName = ""
 
-    pcards.innerText = "Your cards:" + "\n" + playerCardName + "\n" + "Your Score:" + playerScore
-    dcards.innerText = "Dealer cards:" + "\n" + dealerCardName + "\n" + "Dealer Score:" + dealerScore
-
-    if (gameOver) {
-        if (playerWon) {
-            message.innerText = "CONGRATULATION, YOU WON!"
+        for (let i = 0; i < playerCards.length; i++) {
+            playerCardName += getCardName(playerCards[i]) + "\n" 
         }
-        else {
-            message.innerText = "SORRY, DEALER WON! BETTER LUCK NEXT TIME"
+            
+        for (let i = 0; i < dealerCards.length; i++) {
+            dealerCardName += getCardName(dealerCards[i]) + "\n" 
         }
-        newGameButton.style.visibility = "visible"
-        addCard.style.visibility = "hidden"
-        stay.style.visibility = "hidden"
-        exitGame.style.visibility = "hidden"
-    }
+
+        updateScores();
+
+        pcards.innerText = "Your cards:" + "\n" + playerCardName + "\n" + "Your Score:" + playerScore
+        dcards.innerText = "Dealer cards:" + "\n" + dealerCardName + "\n" + "Dealer Score:" + dealerScore
+
+        if (playerScore>21) {
+            playerWon = false
+            gameOver = true
+        }
+        else if (dealerScore >21) {
+            playerWon = true
+            gameOver = true
+        }
+        else if (dealerScore == 21 && playerScore == 21) {
+            playerWon = true
+            dealerWon = true
+        }
+
+        if (gameOver) {
+            if (playerWon == true && dealerWon == true) {
+                message.innerText = "It's a TIE"
+            }
+            else if (playerWon) {
+                message.innerText = "CONGRATULATION, YOU WON!"
+            }
+            
+            else {
+                message.innerText = "SORRY, DEALER WON! BETTER LUCK NEXT TIME!"
+            }
+            newGameButton.style.visibility = "visible"
+            addCard.style.visibility = "hidden"
+            stay.style.visibility = "hidden"
+            exitGame.style.visibility = "hidden"
+        }
+    }    
 }
 showStatus()
 
@@ -150,15 +171,38 @@ function newGame() {
     
     deck = newDeck()
     shuffleDeck(deck) 
-    
-    
+     
     playerCards = [getNextCard(), getNextCard()]
     dealerCards = [getNextCard(), getNextCard()]
-   // console.log(playerCards) 
     
     showStatus()
-
 }
-function exit() {
 
+function addcard() {
+    playerCards.push(getNextCard())
+    showStatus()
+}
+
+function enough() {
+    gameOver = true
+    
+    while (playerScore <= 21 && dealerScore < 21) {
+        dealerCards.push(getNextCard())
+        updateScores()
+    }
+    showStatus()
+}
+
+function exit() {
+    gameStarted = false
+    gameOver = true,
+    playerWon = false,
+    dealerWon = false
+    newGameButton.style.visibility = "visible"
+    addCard.style.visibility = "hidden"
+    stay.style.visibility = "hidden"
+    exitGame.style.visibility = "hidden"
+    showStatus()
+    pcards.innerText = ""
+    dcards.innerText = ""
 }
