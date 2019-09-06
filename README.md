@@ -22,3 +22,8 @@ Source for Day15: Pluralsight - https://app.pluralsight.com/player?course=javasc
 2019.09.03: Had some problem after RX 580 install- fixed, Programming: only W3schools were read
 
 2019.09.04: Day 15 finished - hit, stay, exit buttons programmed, can handle TIE situation too.
+
+2019.09.05: Watched about 1 hour of https://app.pluralsight.com/player?course=javascript-practical-design-patterns&author=jonathan-mills&name=javascript-practical-design-patterns-m3&clip=9&mode=live
+
+2019.09.06: Finished with https://app.pluralsight.com/player?course=javascript-practical-design-patterns&author=jonathan-mills&name=javascript-practical-design-patterns-m3&clip=9&mode=live
+Offtopic: Ordered i5 9400F + 8 GB RAM + B360M Pro 4 - next week my computer will be fully upgraded.
