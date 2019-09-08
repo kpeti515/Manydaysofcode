@@ -1,4 +1,4 @@
-body {
+﻿body {
   margin-top: 45px;
 }
 .navbar {
@@ -8,6 +8,13 @@ body {
   transform: rotateY(360deg);
   transition: 1.5s ease-in-out;
 }
+/*.dropdown-menu {
+    overflow-y: scroll !important;
+    max-height: 70vh !important;
+} valami�rt nem �rja fel�l az alapbe�ll�t�st a 
+    k�dban de ha beteszem inline style-ba akkor
+    meg m�k�dik..... pr�b�ltam id-t is adni neki,
+    de ugyan�gy semmi, csak inlineban �rja fel�l*/
 .dropdown-item {
   color: rgba(255, 255, 255, 0.5);
 }

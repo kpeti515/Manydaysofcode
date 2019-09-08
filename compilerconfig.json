@@ -18,5 +18,9 @@
   {
     "outputFile": "CSS/responsive-menu3.css",
     "inputFile": "CSS/responsive-menu3.less"
+  },
+  {
+    "outputFile": "CSS/resp-boot-nav-footer.css",
+    "inputFile": "CSS/resp-boot-nav-footer.less"
   }
 ]

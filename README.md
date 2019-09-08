@@ -27,3 +27,9 @@ Source for Day15: Pluralsight - https://app.pluralsight.com/player?course=javasc
 
 2019.09.06: Finished with https://app.pluralsight.com/player?course=javascript-practical-design-patterns&author=jonathan-mills&name=javascript-practical-design-patterns-m3&clip=9&mode=live
 Offtopic: Ordered i5 9400F + 8 GB RAM + B360M Pro 4 - next week my computer will be fully upgraded.
+
+2019.09.07: Day off - Traveled to my parents.
+
+2019.09.08: Made the Pluralsight SkillIQ test - I'm happy with the result, but I have to practice more. 
+Completed Navbar dropdown days block, scrolling work only with inline style actually.... Main page navbar added.
+Started to watch https://app.pluralsight.com/player?course=javascript-best-practices&author=jonathan-mills&name=javascript-best-practices-m1&clip=0&mode=live
