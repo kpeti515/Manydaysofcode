@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Lorand Kallai" />
-    <meta name="description" content="Day15 100 days of code" />
+    <meta name="description" content="Day16 100 days of code" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="html,html5,web development,pluralsight,100 days of code,Lorand Kallai" />
-    <title>Day15</title>
+    <title>Day16</title>
     <link rel="icon" href="Pictures/logo.ico" resource="https://www.shutterstock.com/hu/search/lk+logo" />
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap-grid.min.css" />
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />
@@ -156,7 +156,14 @@
     </header>
 
     <main>
-        
+        <h1>Javascript exercises</h1>
+        <h2>1.) FizzBuzz</h2>
+        <p>As I know this is a simple task. Check numbers from 1 to 100, if a number can devide with 3 (remainer == 0) write FIZZ, if devided by 5 then BUZZ.</p>
+        <p>If the given number can be devide with both, then use the word FIZZBUZZ.</p>
+        <p>I override the rules a bit, you can choose any divider between 2 and 100</p>
+        <input id="div1" placeholder="1st divider: FIZZ" type="number"/>
+        <input id="div2" placeholder="2nd divider: BUZZ" type="number"/> <button onclick="fizzbuzz(div1.value, div2.value)">FizzBuzz</button>
+        <p id="fizzresult"></p>
     </main>
 
     <footer id="footer" class="container-fluid bg-light">
@@ -167,6 +174,6 @@
             &nbsp;&nbsp;<a class="profiles instaicon" href="https://www.instagram.com/lorandkallai/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-    <script src="/Scripts/Day15.js"></script>
+    <script src="/Scripts/Day16.js"></script>
 </body>
 </html>
