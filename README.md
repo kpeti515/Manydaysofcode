@@ -26,7 +26,7 @@ Source for Day15: Pluralsight - https://app.pluralsight.com/player?course=javasc
 2019.09.05: Watched about 1 hour of https://app.pluralsight.com/player?course=javascript-practical-design-patterns&author=jonathan-mills&name=javascript-practical-design-patterns-m3&clip=9&mode=live
 
 2019.09.06: Finished with https://app.pluralsight.com/player?course=javascript-practical-design-patterns&author=jonathan-mills&name=javascript-practical-design-patterns-m3&clip=9&mode=live
-Offtopic: Ordered i5 9400F + 8 GB RAM + B360M Pro 4 - next week my computer will be fully upgraded.
+Offtopic: Ordered i5 9400F + CPU cooler + 8 GB RAM + B360M Pro 4 - next week my computer will be fully upgraded.
 
 2019.09.07: Day off - Traveled to my parents.
 
@@ -35,3 +35,6 @@ Made the Pluralsight SkillIQ test - I'm happy with the result, but I have to pra
 Completed Navbar dropdown days block, scrolling work only with inline style actually.... Main page navbar added.
 Started to watch https://app.pluralsight.com/player?course=javascript-best-practices&author=jonathan-mills&name=javascript-best-practices-m1&clip=0&mode=live
 
+2019.09.09 FIZZBUZZ revamp. What happen if you try to use setTimeout in a for cycle? Awww maaan... Meh'... it was a hard lesson to know how the engine and the closures work, but solved the issue. 8 GB ram + a cpu cooler arrived, waiting only for motherboard + cpu.
+
+2019.09.10. Still FIZZBUZZ... Made a more cleaner code, and implemented my expected behavior to the calculating (it looks like that the computer processing the datas as slow as a human would). Continued to watch best practicies for javascript at pluralsight. 
