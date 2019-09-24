@@ -46,13 +46,13 @@ const area = Math.sqrt(halfPerimeter * (halfPerimeter - sideA) * (halfPerimeter 
 console.log('The area of the triangle is: ' + area + ' unit')
 
 // Task 5. Rotate string Ezt nem igazán értem mit miért csinál, utána kell olvasni majd Csosza segít ha nem megy.
-function rotateText (id) {
-  const element = document.getElementById(id)
-  const textNode = element.childNodes[0] // assuming no other children
-  let text = textNode.data
+function rotateText (target) {
+  const element = document.getElementById(target) //mozgatandó szöveg helye
+  const textNode = element.childNodes[0] // ???
+  let text = textNode.data //????
 
   setInterval(function () {
-    text = text[text.length - 1] + text.substring(0, text.length - 1)
+    text = text[text.length - 1] + text.substring(0, text.length - 1) //ezt nem értem mit csinál
     textNode.data = text
-  }, 100)
+  }, 100) // infinite function but why??
 }
